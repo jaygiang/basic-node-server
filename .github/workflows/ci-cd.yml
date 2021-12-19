@@ -38,7 +38,7 @@ jobs:
       matrix:
         python-version: [3.8]
         node-version: ['12.x']
-        appname: ['aws-codedeploy-staging']
+        appname: ['aws-codedeploy-j']
         deploy-group: ['staging']
         s3-bucket: ['aws-codedeploy-deployments-j']
         s3-filename: ['staging-aws-codedeploy-${{ github.sha }}']
