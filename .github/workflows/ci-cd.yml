@@ -32,7 +32,7 @@ jobs:
       #   run: npm run build
 
   staging-deploy:
-    if: ${{ github.ref == 'refs/heads/staging' }}
+    if: ${{ github.ref == 'refs/heads/testing' }}
     name: CD Pipeline - Staging
     runs-on: ubuntu-latest
     strategy:
