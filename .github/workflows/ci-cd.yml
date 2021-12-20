@@ -31,8 +31,9 @@ jobs:
       # - name: Run build
       #   run: npm run build
 
-  deploy:
-    name: CD Pipeline
+  staging-deploy:
+    if: ${{ github.ref == 'refs/heads/staging' }}
+    name: CD Pipeline - Staging
     runs-on: ubuntu-latest
     strategy:
       matrix:
