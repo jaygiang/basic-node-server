@@ -33,14 +33,14 @@ jobs:
 
   testing-deploy:
     if: ${{ github.ref == 'refs/heads/testing' }}
-    name: CD Pipeline - Staging
+    name: CD Pipeline - testing
     runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: [3.8]
         node-version: ['12.x']
-        appname: ['aws-codedeploy-j']
-        deploy-group: ['staging']
+        appname: ['aws-codedeploy-testing']
+        deploy-group: ['testing']
         s3-bucket: ['aws-codedeploy-deployments-j']
         s3-filename: ['staging-aws-codedeploy-${{ github.sha }}']
 

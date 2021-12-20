@@ -22,7 +22,7 @@ class RootCtrl {
 
         res.render('home-page', {
             origin: `${req.protocol}://${req.get('host')}`,
-            name: req.query.name || 'Lois',
+            name: req.query.name || 'Sunday the dog',
         });
     }
 }
